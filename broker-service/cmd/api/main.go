@@ -17,7 +17,7 @@ func main() {
 
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%s", webPort),
-		handler: app.Routes(),
+		Handler: app.routes(),
 	}
 
 	err := srv.ListenAndServe()
